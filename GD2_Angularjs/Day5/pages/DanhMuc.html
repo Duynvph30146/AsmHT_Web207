@@ -1,0 +1,255 @@
+<body ng-controller="DanhMucCtrl">
+    <img src="/ASM_HT/banner5.webp" alt="" width="100%">
+    <div class="d-flex justify-content-center" style="padding-top: 20px;">
+        <button class="btn btn-dark">Fenty Creeper</button>
+        <button class="btn btn-dark" style="margin-left: 10px;">Skye</button>
+        <button class="btn btn-dark" style="margin-left: 10px;">Bari Mule</button>
+        <button class="btn btn-dark" style="margin-left: 10px;">Fenty P698</button>
+        <button class="btn btn-dark" style="margin-left: 10px;">Suede</button>
+        <button class="btn btn-dark" style="margin-left: 10px;">Deva Suede</button>
+        <button class="btn btn-dark" style="margin-left: 10px;">Ignite Evoknit</button>
+    </div>
+    <div style="padding-top: 20px;">
+    </div>
+    <h3 style="padding-left: 40px;">CATEGORY</h3>
+    <div class="row">
+        <div class="col-lg-2 bg-warning" style="padding-left: 40px;">
+            <button class="btn btn-dark" style="margin-left: 30px;margin-top: 20px;">STUFF</button>
+            <p></p>
+            <ul ng-repeat="pr in lstProducts">
+                <input type="checkbox" ng-model="filter.gia[gia]">{{pr.stuff}}
+            </ul>
+            <button class="btn btn-dark" style="margin-left: 30px;">SOLE</button>
+            <p></p>
+            <ul ng-repeat="pr in lstProducts">
+                <input type="checkbox" ng-model="filter.gia[gia]">{{pr.sole}}
+            </ul>
+            <button class="btn btn-dark" style="margin-left: 30px;">ORIGIN</button>
+            <p></p>
+            <ul ng-repeat="pr in lstProducts">
+                <input type="checkbox" ng-model="filter.gia[gia]">{{pr.origin}}
+            </ul>
+
+        </div>
+
+        <div class="col-lg-10" style="padding-top: 20px;padding-right:20px;">
+            <!--modal add-->
+            <div class="modal fade" id="exampleModaladd" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="width: 700px;;height: 700px;">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm danh mục</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="width: 1000px;">
+                            <form name="DanhMuc">
+                                <p ng-if="DanhMuc.name.$invalid" style="color: red;">Tên sản phẩm(*)</p>
+                                <input type="text" class="form-control" style="width: 670px;"
+                                    ng-model="form_Products.name" name="name" required
+                                    placeholder="Tên sản phẩm">
+                                <p></p>
+                                <p ng-if="DanhMuc.chatlieu.$invalid" style="color: red;">Chất liệu(*)
+                                </p>
+                                <input type="text" class="form-control" style="width: 670px;"
+                                    ng-model="form_Products.stuff" name="chatlieu" required
+                                    placeholder="Chất liệu">
+                                <p></p>
+                                <p ng-if="DanhMuc.degiay.$invalid" style="color: red;">Đế giày(*)</p>
+                                <input type="text" class="form-control" style="width: 670px;"
+                                    ng-model="form_Products.sole" name="degiay" required
+                                    placeholder="Đế giày">
+                                <p></p>
+                                <p ng-if="DanhMuc.thuonghieu.$invalid" style="color: red;">Thương
+                                    hiệu(*)</p>
+                                <input type="text" class="form-control" style="width: 670px;"
+                                    ng-model="form_Products.trademark" name="thuonghieu" required
+                                    placeholder="Thương hiệu">
+                                <p></p>
+                                <p ng-if="DanhMuc.xuatxu.$invalid" style="color: red;">Xuất xứ(*)</p>
+                                <input type="text" class="form-control" style="width: 670px;"
+                                    ng-model="form_Products.origin" name="xuatxu" required
+                                    placeholder="Xuất xứ">
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" ng-click="addSinhVien($event);" ng-disabled="DanhMuc.$invalid">Thêm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--end modal add-->
+            <button data-bs-toggle="modal" data-bs-target="#exampleModaladd" class="btn btn-primary"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-lg"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                </svg>
+                <!--Thêm--></button>
+            <table class="table table-bordered table-hover" style="margin-top: 20px;">
+                <thead>
+                    <tr class="table table-dark">
+                        <th scope="col">Tên sản phẩm</th>
+                        <th scope="col">Chất liệu</th>
+                        <th scope="col">Đế giày</th>
+                        <th scope="col">Thương hiệu</th>
+                        <th scope="col">Xuất xứ</th>
+                        <th scope="col">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="pr in lstProducts">
+                        <td>{{pr.name}}</td>
+                        <td>{{pr.stuff}}</td>
+                        <td>{{pr.sole}}</td>
+                        <td>{{pr.trademark}}</td>
+                        <td>{{pr.origin}}</td>
+                        <td class="d-flex justify-content-center">
+                            <!--modal-->
+                            <div class="modal fade" id="exampleModalTTDM" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content" style="width: 700px;;height: 500px;">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Thông tin danh mục</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" style="width: 1000px;">
+                                            <form action="">
+
+                                                <label>Tên sản phẩm</label>
+                                                <input type="text" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.name" disabled>
+                                                <label>Chất liệu</label>
+                                                <input type="text" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.stuff" disabled>
+                                                <label>Đế giày</label>
+                                                <input type="text" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.sole" disabled>
+                                                <label>Thương hiệu</label>
+                                                <input type="text" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.trademark" disabled>
+                                                <label>Xuất xứ</label>
+                                                <input type="text" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.origin" disabled>
+
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!--endModal-->
+
+                            <!--Modal cập nhật-->
+                            <div class="modal fade" id="exampleModalCNDM" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content" style="width: 700px;;height: 700px;">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cập nhật danh mục</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" style="width: 1000px;">
+                                            <form name="DanhMuc">
+                                                <p ng-if="DanhMuc.name.$invalid" style="color: red;">Tên sản phẩm(*)</p>
+                                                <input type="text" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.name" name="name" required
+                                                    placeholder="Tên sản phẩm">
+                                                <p></p>
+                                                <p ng-if="DanhMuc.chatlieu.$invalid" style="color: red;">Chất liệu(*)
+                                                </p>
+                                                <input type="text" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.stuff" name="chatlieu" required
+                                                    placeholder="Chất liệu">
+                                                <p></p>
+                                                <p ng-if="DanhMuc.degiay.$invalid" style="color: red;">Đế giày(*)</p>
+                                                <input type="text" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.sole" name="degiay" required
+                                                    placeholder="Đế giày">
+                                                <p></p>
+                                                <p ng-if="DanhMuc.thuonghieu.$invalid" style="color: red;">Thương
+                                                    hiệu(*)</p>
+                                                <input type="text" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.trademark" name="thuonghieu" required
+                                                    placeholder="Thương hiệu">
+                                                <p></p>
+                                                <p ng-if="DanhMuc.xuatxu.$invalid" style="color: red;">Xuất xứ(*)</p>
+                                                <input type="text" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.origin" name="xuatxu" required
+                                                    placeholder="Xuất xứ">
+
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary"
+                                                ng-click="updateSinhVien($event)" ng-disabled="DanhMuc.$invalid">Cập
+                                                nhật</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!--end Model cập nhật-->
+
+                            <button data-bs-toggle="modal" data-bs-target="#exampleModalTTDM"
+                                class="btn btn-danger rounded-pill" style="width: 100px; margin-right: 20px;"
+                                ng-click="detailSinhVien($event,$index);"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="20" height="20" fill="white" class="bi bi-ticket-detailed"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5ZM5 7a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z" />
+                                    <path
+                                        d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5ZM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5h-13Z" />
+                                </svg>
+                                <!--Chi tiết--></button>
+                            <button data-bs-toggle="modal" data-bs-target="#exampleModalCNDM"
+                                class="btn btn-success rounded-pill" style="width: 100px;margin-right: 20px;"
+                                ng-click="detailSinhVien($event,$index);"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="20" height="20" fill="white" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                                </svg>
+                                <!--Cập nhật--></button>
+                            <button class="btn btn-warning rounded-pill" style="width: 100px;"
+                                ng-click="removeSinhVien($event,$index);"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="20" height="20" fill="white" class="bi bi-trash3" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+                                </svg></button>
+
+
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <input type="text" class="form-control" placeholder="Search for products in this collection"
+                style="margin-left: 150px;margin-right: 200px;width: 870px;" ng-model="query">
+            <br>
+            <div class="row">
+                <div class="col-lg-4" style="padding-left: 55px;" ng-repeat="pr in lstProductsQLSP | filter: query">
+                    <img src="{{pr.image}}" width="100%">
+                    <p>{{pr.name}}</p>
+                    <p>{{pr.color}}</p>
+                    <p style="font-weight: bold;color: red;">{{pr.price}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,513 @@
+<body ng-controller="QLSPCtrl">
+    <div class="row">
+        <div class="col-lg-2">
+            <div id="accordion">
+                <!--dm1-->
+                <div class="card">
+                    <div class="card-header">
+                        <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                                class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                            </svg>
+                            Bán hàng tại quầy
+                        </a>
+                    </div>
+                    <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                            </svg>
+                            Thay đổi lịch học
+                        </div>
+                        <div class="card-body">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                            </svg>
+                            Thay đổi lịch học
+                        </div>
+                        <div class="card-body">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                            </svg>
+                            Thay đổi lịch học
+                        </div>
+                    </div>
+                </div>
+                <!--dm2-->
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                                class="bi bi-kanban-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11zm5 2h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm-5 1a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm9-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" />
+                            </svg>
+                            Sản phẩm
+                        </a>
+                    </div>
+                    <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                        <a href="#SanPham" class="text-decoration-none text-black">
+                            <div class="card-body">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-dot" viewBox="0 0 16 16">
+                                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                </svg>
+                                Sản phẩm
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                            </svg>
+                            Sản phẩm
+                        </div>
+                        <div class="card-body">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                            </svg>
+                            Sản phẩm
+                        </div>
+                    </div>
+                </div>
+                <!--dm3-->
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="black"
+                                class="bi bi-receipt" viewBox="0 0 16 16">
+                                <path
+                                    d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z" />
+                                <path
+                                    d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z" />
+                            </svg>
+                            Hóa đơn
+                        </a>
+                    </div>
+                    <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                            </svg>
+                            hello
+                        </div>
+                        <div class="card-body">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                            </svg>
+                            hello
+                        </div>
+                        <div class="card-body">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                            </svg>
+                            hello
+                        </div>
+                    </div>
+                </div>
+                <!--dm4-->
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefor">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                                class="bi bi-currency-exchange" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 5a5.002 5.002 0 0 0 4.027 4.905 6.46 6.46 0 0 1 .544-2.073C3.695 7.536 3.132 6.864 3 5.91h-.5v-.426h.466V5.05c0-.046 0-.093.004-.135H2.5v-.427h.511C3.236 3.24 4.213 2.5 5.681 2.5c.316 0 .59.031.819.085v.733a3.46 3.46 0 0 0-.815-.082c-.919 0-1.538.466-1.734 1.252h1.917v.427h-1.98c-.003.046-.003.097-.003.147v.422h1.983v.427H3.93c.118.602.468 1.03 1.005 1.229a6.5 6.5 0 0 1 4.97-3.113A5.002 5.002 0 0 0 0 5zm16 5.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0zm-7.75 1.322c.069.835.746 1.485 1.964 1.562V14h.54v-.62c1.259-.086 1.996-.74 1.996-1.69 0-.865-.563-1.31-1.57-1.54l-.426-.1V8.374c.54.06.884.347.966.745h.948c-.07-.804-.779-1.433-1.914-1.502V7h-.54v.629c-1.076.103-1.808.732-1.808 1.622 0 .787.544 1.288 1.45 1.493l.358.085v1.78c-.554-.08-.92-.376-1.003-.787H8.25zm1.96-1.895c-.532-.12-.82-.364-.82-.732 0-.41.311-.719.824-.809v1.54h-.005zm.622 1.044c.645.145.943.38.943.796 0 .474-.37.8-1.02.86v-1.674l.077.018z" />
+                            </svg>
+                            Khuyến mãi
+                        </a>
+                    </div>
+                    <div id="collapsefor" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+                <!--dm5-->
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefive">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                                class="bi bi-person-check-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                                <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg>
+                            Tài khoản
+                        </a>
+                    </div>
+                    <div id="collapsefive" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+                <!--dm6-->
+                <div class="card">
+                    <div class="card-header">
+                        <a class="btn" data-bs-toggle="collapse" href="#collapsesix">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                                class="bi bi-backpack4-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0a2 2 0 0 0-2 2H3.5a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h4v.5a.5.5 0 0 0 1 0V7h4a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H10a2 2 0 0 0-2-2Zm1 2a1 1 0 0 0-2 0h2Zm-4 9v2h6v-2h-1v.5a.5.5 0 0 1-1 0V11H5Z" />
+                                <path
+                                    d="M14 7.599A2.986 2.986 0 0 1 12.5 8H9.415a1.5 1.5 0 0 1-2.83 0H3.5A2.986 2.986 0 0 1 2 7.599V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7.599ZM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-3Z" />
+                            </svg>
+                            Thống kê
+                        </a>
+                    </div>
+                    <div id="collapsesix" class="collapse show" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            Thay đổi lịch học
+                        </div>
+                        <div class="card-body">
+                            Thay đổi lịch học
+                        </div>
+                        <div class="card-body">
+                            Thay đổi lịch học
+                        </div>
+                    </div>
+                </div>
+                <!--dm7-->
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseSevent">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                                class="bi bi-bricks" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 .5A.5.5 0 0 1 .5 0h15a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5H2v-2H.5a.5.5 0 0 1-.5-.5v-3A.5.5 0 0 1 .5 6H2V4H.5a.5.5 0 0 1-.5-.5v-3zM3 4v2h4.5V4H3zm5.5 0v2H13V4H8.5zM3 10v2h4.5v-2H3zm5.5 0v2H13v-2H8.5zM1 1v2h3.5V1H1zm4.5 0v2h5V1h-5zm6 0v2H15V1h-3.5zM1 7v2h3.5V7H1zm4.5 0v2h5V7h-5zm6 0v2H15V7h-3.5zM1 13v2h3.5v-2H1zm4.5 0v2h5v-2h-5zm6 0v2H15v-2h-3.5z" />
+                            </svg>
+                            Quản lý kho
+                        </a>
+                    </div>
+                    <div id="collapseSevent" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            Bảng điểm theo kỳ
+                        </div>
+                        <div class="card-body">
+                            Lịch sử học
+                        </div>
+                        <div class="card-body">
+                            Bảng điểm
+                        </div>
+                    </div>
+                </div>
+                <!--dm8-->
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseAat">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                                class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                            </svg>
+                            Bài viết
+                        </a>
+                    </div>
+                    <div id="collapseAat" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+                <!--dm9-->
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseNice">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                                class="bi bi-phone-vibrate-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M4 4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm5 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0zM1.807 4.734a.5.5 0 1 0-.884-.468A7.967 7.967 0 0 0 0 8c0 1.347.334 2.618.923 3.734a.5.5 0 1 0 .884-.468A6.967 6.967 0 0 1 1 8c0-1.18.292-2.292.807-3.266zm13.27-.468a.5.5 0 0 0-.884.468C14.708 5.708 15 6.819 15 8c0 1.18-.292 2.292-.807 3.266a.5.5 0 0 0 .884.468A7.967 7.967 0 0 0 16 8a7.967 7.967 0 0 0-.923-3.734zM3.34 6.182a.5.5 0 1 0-.93-.364A5.986 5.986 0 0 0 2 8c0 .769.145 1.505.41 2.182a.5.5 0 1 0 .93-.364A4.986 4.986 0 0 1 3 8c0-.642.12-1.255.34-1.818zm10.25-.364a.5.5 0 0 0-.93.364c.22.563.34 1.176.34 1.818 0 .642-.12 1.255-.34 1.818a.5.5 0 0 0 .93.364C13.856 9.505 14 8.769 14 8c0-.769-.145-1.505-.41-2.182z" />
+                            </svg>
+                            Danh sách liên hệ
+                        </a>
+                    </div>
+                    <div id="collapseNice" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+                <!--dm10-->
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTen">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                                class="bi bi-person-standing" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM6 6.75v8.5a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2.75a.75.75 0 0 0 1.5 0v-2.5a.25.25 0 0 1 .5 0Z" />
+                            </svg>
+                            Nhân viên
+                        </a>
+                    </div>
+                    <div id="collapseTen" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-10">
+            <div style="padding-top: 20px;" class="d-flex">
+                <input type="text" placeholder="Tìm kiếm" class="form-control" style="width: 200px;">
+                <button class="btn btn-dark" style="margin-left: 10px;">Tìm kiếm</button>
+
+
+
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="width: 700px;;height: 700px;">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm sản phẩm</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" style="width: 1000px;">
+                                <form name="AddValidate">
+                                    <label>Ảnh</label>
+                                    <input type="file" id="fileInput" class="form-control" style="width: 670px;"
+                                        accept="image/*" ng-model="form_Products.image"
+                                        onchange="angular.element(this).scope().imageSelected(event)">
+                                    <p></p>
+                                    <span ng-show="AddValidate.$invalid && !form_Products.image" style="color: red;">Vui
+                                        lòng chọn ảnh(*)</span>
+                                    <p></p>
+                                    <img ng-src="{{form_Products.image}}" alt="" width="100px" height="70px">
+                                    <p></p>
+                                    <p ng-if="AddValidate.nameValidate.$invalid" style="color: red;">Tên sản phẩm(*)</p>
+                                    <input type="text" class="form-control" style="width: 670px;"
+                                        ng-model="form_Products.name" name="nameValidate" required
+                                        placeholder="Tên sản phẩm">
+                                    <p></p>
+                                    <p ng-if="AddValidate.sizeValidate.$invalid" style="color: red;">Size sản phẩm(*)
+                                    </p>
+                                    <p></p>
+                                    <input type="number" class="form-control" style="width: 670px;"
+                                        ng-model="form_Products.size" name="sizeValidate" required placeholder="Size">
+                                    <p ng-if="AddValidate.priceValidate.$invalid" style="color: red;">Giá sản phẩm(*)
+                                    </p>
+                                    <p></p>
+                                    <input type="text" class="form-control" style="width: 670px; "
+                                        ng-model="form_Products.price" name="priceValidate" required placeholder="Giá">
+                                    <p ng-if="AddValidate.statusValidate.$invalid" style="color: red;">Trạng thái sản
+                                        phẩm(*)</p>
+                                    <p></p>
+                                    <input type="text" class="form-control" style="width: 670px;"
+                                        ng-model="form_Products.status" name="statusValidate" required
+                                        placeholder="Trạng thái">
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" ng-click="addSinhVien($event);"
+                                    ng-disabled="AddValidate.$invalid || !form_Products.image">Thêm</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <button data-bs-toggle="modal" data-bs-target="#exampleModal2" class="btn btn-primary"
+                    style="margin-left: 650px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                        class="bi bi-plus" viewBox="0 0 16 16">
+                        <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg>
+                    Tạo sản phẩm</button>
+            </div>
+            <div class="d-flex justify-content-end" style="padding-top: 10px;">
+                <label style="font-weight: bold;"> Size:</label><select class="form-select-sm"
+                    style="width: 100px;color: green;">
+                    <option ng-repeat="sz in lstProducts">
+                        {{sz.size}}
+                    </option>
+                </select>
+                <!---->
+                <label style="font-weight: bold;padding-left: 10px;"> Trạng thái:</label><select class="form-select-sm"
+                    style="width: 100px;color: green;">
+                    <option ng-repeat="tt in lstProducts">{{tt.status}}</option>
+
+                </select>
+            </div>
+            <br>
+            <!----->
+            <table class="table table-bordered table-hover" style="margin-top: 20px;">
+                <thead>
+                    <tr class="table table-dark">
+                        <th scope="col">Ảnh</th>
+                        <th scope="col">Sản phẩm</th>
+                        <th scope="col">Size</th>
+                        <th scope="col">Giá</th>
+                        <th scope="col">Trạng thái</th>
+                        <th scope="col">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="pr in lstProducts">
+                        <td>
+                            <img src="{{pr.image}}" alt="" width="100px" height="150px">
+                        </td>
+                        <td>{{pr.name}}</td>
+                        <td>{{pr.size}}
+                        </td>
+                        <td>{{pr.price}} VNĐ</td>
+                        <td>{{pr.status}}</td>
+                        <td class="d-flex justify-content-center">
+                            <!--modal-->
+                            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content" style="width: 700px;;height: 500px;">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Thông tin sản phẩm</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" style="width: 1000px;">
+                                            <form>
+                                                <label>Ảnh</label>
+                                                <img ng-src="{{form_Products.image}}" class="form-control"
+                                                    style="width:100px;height: 70px;">
+                                                <label>Tên sản phẩm</label>
+                                                <input type="text" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.name" disabled>
+                                                <label>Size</label>
+                                                <input type="text" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.size" disabled>
+                                                <label>Giá</label>
+                                                <input type="text" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.price" disabled>
+                                                <label>Trạng thái</label>
+                                                <input type="text" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.status" disabled>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--endModal-->
+                            <!--Modal cập nhật-->
+                            <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content" style="width: 700px;;height: 700px;">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cập nhật sản phẩm</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" style="width: 1000px;">
+                                            <form name="UpdateValidate">
+                                                <p ng-if="!form_Products.image" style="color: red;">Ảnh(*)</p>
+                                                <input type="file" id="fileInputUpdate" class="form-control"
+                                                    style="width: 670px;" accept="image/*"
+                                                    ng-model="form_Products.image"
+                                                    onchange="angular.element(this).scope().imageSelectedForUpdate(event)">
+                                                <img ng-src="{{form_Products.image}}" class="form-control"
+                                                    style="width:100px;height: 70px;">
+                                                <p ng-if="UpdateValidate.name.$invalid" style="color: red;">Tên sản
+                                                    phẩm(*)</p>
+                                                <p></p>
+                                                <input type="text" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.name" name="name" required
+                                                    placeholder="Tên sản phẩm">
+                                                <p ng-if="UpdateValidate.size.$invalid" style="color: red;">Size sản
+                                                    phẩm(*)</p>
+                                                <p></p>
+                                                <input type="number" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.size" name="size" required
+                                                    placeholder="Size">
+                                                <p ng-if="UpdateValidate.price.$invalid" style="color: red;">Giá sản
+                                                    phẩm(*)</p>
+                                                <p></p>
+                                                <input type="text" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.price" thousands-separator name="price"
+                                                    required placeholder="Giá">
+                                                <p ng-if="UpdateValidate.status.$invalid" style="color: red;">Trạng thái
+                                                    sản phẩm(*)</p>
+                                                <p></p>
+                                                <input type="text" class="form-control" style="width: 670px;"
+                                                    ng-model="form_Products.status" name="status" required
+                                                    placeholder="Trạng thái">
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary"
+                                                ng-click="updateSinhVien($event)"
+                                                ng-disabled="UpdateValidate.$invalid || !form_Products.image">Cập
+                                                nhật</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end Model cập nhật-->
+                            <button data-bs-toggle="modal" data-bs-target="#exampleModal3"
+                                class="btn btn-danger rounded-pill" style="width: 100px; margin-right: 20px;"
+                                ng-click="detailSinhVien($event,$index);"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="20" height="20" fill="white" class="bi bi-ticket-detailed"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5ZM5 7a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z" />
+                                    <path
+                                        d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5ZM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5h-13Z" />
+                                </svg>
+                                <!--Chi tiết--></button>
+                            <button data-bs-toggle="modal" data-bs-target="#exampleModal4"
+                                class="btn btn-success rounded-pill" style="width: 100px;margin-right: 20px;"
+                                ng-click="detailSinhVien($event,$index);"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="20" height="20" fill="white" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                                </svg>
+                                <!--Cập nhật--></button>
+                            <button class="btn btn-warning rounded-pill" style="width: 100px;"
+                                ng-click="removeSinhVien($event,$index);"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="20" height="20" fill="white" class="bi bi-trash3" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+                                </svg>
+                                <!--Xóa--></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!---->
+    <div class="row">
+        <div class="col-lg-4" style="padding-left: 55px;" ng-repeat="pr in lstProducts">
+            <img src="{{pr.image}}" width="100%">
+            <p>{{pr.name}}</p>
+            <p>{{pr.color}}</p>
+            <p style="font-weight: bold;">{{pr.price}}</p>
+        </div>
+    </div>
+</body>

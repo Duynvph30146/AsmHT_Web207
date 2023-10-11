@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- C1: Nhúng file angular js -->
+    <!-- <script src="../angular.min.js" language="javascript"></script> -->
+    <!-- C2: Nhúng bằng đường link cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!-- NHÚNG LINK CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Khai báo app/module trên file html -->
+    <!-- ng-app: Dùng để khai báo app/module -->
+    <div ng-app="firstApp">
+        <!-- Khai báo các nhóm chức năng có trong app/module -->
+        <!-- ng-controller: Dùng để khai báo chức năng -->
+        <div ng-controller="helloController">
+            <!-- 2 ways databinding -->
+            Xin chào {{name}} - {{age}} tuổi
+            <p>THÔNG TIN SINH VIÊN</p>
+            <p>Họ và tên: {{student.name}}</p>
+            <p>Tuổi: {{student.age}}</p>
+            <p>Email: {{student.email}}</p> 
+            <ul>
+                <li>{{arr[0]}}</li>
+                <li>{{arr[1]}}</li>
+                <li>{{arr[2]}}</li>
+            </ul> 
+        </div> 
+        <!-- TableController -->
+        <div ng-controller="tableController">
+            <h3>DANH SÁCH SINH VIÊN</h3>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Tên</th>
+                    <th scope="col">Tuổi</th>
+                    <th scope="col">Email</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <!-- Sử dụng directive để for dữ liệu: ng-repeat -->
+                  <tr ng-repeat="st in arrStd">
+                    <td>{{st.name}}</td>
+                    <td>{{st.age}}</td>
+                    <td>{{st.email}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        <!-- TableController -->
+        <form action="" ng-controller="formController">
+            <!-- ng-model: đặt tên biến, giúp tương tác 2 chiều từ html và code angularjs -->
+            <input type="text" placeholder="Điền tên" value="{{ten}}" ng-model="ten">
+            <!-- ng-click: xử lý sự kiện click vào nút -->
+            <button type="submit" ng-click="alertTen()">Nhập</button>
+            Giá trị vừa nhập: {{ten}}
+        </form>
+    </div>
+    <!-- Kết thúc app/module -->
+    <!-- ANGULAR JS -->
+    <script>
+        // Khởi tạo ứng dụng firstApp
+        angular.module("firstApp", [])
+        // Khởi tạo các nhóm tính năng
+        .controller("helloController", function($scope) {
+            // Khai báo biến cơ bản dạng chuỗi ký tự
+            $scope.name = "Vũ Thị Thúy";
+            $scope.age = 31;
+            // Khai báo biến dạng đối tượng
+            $scope.student = {
+                name: "Nguyễn Anh Duy",
+                age: 18,
+                email: "duynaph12345@fpt.edu.vn"
+            };
+            // Khai báo biến dạng mảng
+            $scope.arr = ["trà sữa mochi kéo dài", "Hồng trà sữa", "trà sữa 3Q"];
+        })
+        // tableController
+        .controller("tableController", function($scope) {
+            $scope.arrStd = [
+                {
+                    name: "Nguyễn Anh Duy",
+                    age: 18,
+                    email: "duynaph12345@fpt.edu.vn"
+                },
+                {
+                    name: "Nguyễn Văn Lương",
+                    age: 19,
+                    email: "luongnv16@fpt.edu.vn"
+                },
+                {
+                    name: "Trần Thị Loan",
+                    age: 20,
+                    email: "loantt@fpt.edu.vn"
+                }
+            ];
+        })
+        // formController
+        .controller("formController", function($scope) {
+            $scope.ten = "Hết giờ";
+            // Khai báo 1 hàm trong controller
+            $scope.alertTen = function () {
+                alert("Xin chào " + $scope.ten);
+            }
+        })
+    </script>
+</body>
+</html>

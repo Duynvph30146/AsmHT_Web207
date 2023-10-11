@@ -1,0 +1,45 @@
+<body ng-controller="DoiMatKhauCtrl">
+    <div class="bg-warning d-flex " style="height: 700px;">
+        <div class="col-lg-6 m-5 ml-5">
+            <img src="logo3.png" alt="" style="padding-left: 250px;">
+            <h1 class="text-break text-primary"> XIN CHÀO</h1>
+            <h1>QUÝ KHÁCH </h1>
+            <h3>PUMA là một trong những thương hiệu thể thao hàng đầu thế giới về thiết kế, phát triển các mặt hàng
+                giày, dép, quần áo, phụ kiện. </h3>
+        </div>
+        <div class=" col-lg-6  ">
+            <h3 style="padding-left: 100px;padding-top: 20px;">Đổi mật khẩu</h3>
+            <!---form-->
+            <form ng-submit="changePassword()">
+                <div>
+                    <input type="password" id="currentPassword" ng-model="formData.currentPassword" required
+                        class="form-control" style="width: 350px;" placeholder="Mật khẩu hiện tại">
+                </div>
+                <br>
+                <div>
+                    <input type="password" id="newPassword" ng-model="formData.newPassword" required
+                        class="form-control" style="width: 350px;" placeholder="Mật khẩu mới">
+                </div>
+                <br>
+                <div>
+                    <input type="password" id="confirmPassword" ng-model="formData.confirmPassword" required
+                        class="form-control" style="width: 350px;" placeholder="Xác nhận mật khẩu mới">
+                </div>
+                <div>
+                    <label>Tài Khoản Đổi Mật Khẩu:</label>
+                    <select ng-model="formData.targetAccount" required class="form-control" style="width: 100px;">
+                        <option value="admin1">Admin 1</option>
+                        <option value="admin2">Admin 2</option>
+                        <option value="admin3">Admin 3</option>
+                        <!-- Thêm các tài khoản khác vào đây -->
+                    </select>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Đổi Mật Khẩu</button>
+                <div ng-show="successMessage" style="color: red;">{{successMessage}}</div>
+                <div ng-show="errorMessage" style="color: red;">{{errorMessage}}</div>
+            </form>
+            <!--end form--->
+        </div>
+    </div>
+</body>

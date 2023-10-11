@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duynvph30146</title>
+    <!-- NHÚNG LINK CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+    <!--thông báo xóa-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.12.5/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.12.5/dist/sweetalert2.min.js"></script>
+    <!--thư viện shoppe-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js@1.11.0/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.11.0/src/toastify.min.js"></script>
+</head>
+
+<body ng-app="mySPA">
+    <!-- Nhúng code html phần header vào trang -->
+    <div ng-include="'layout/header.html'"></div>
+    <div class="bg-warning" style="height: 30px;line-height: 30px;">
+        <h5 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            <marquee>Đến với "PUMA SNEAKER quý khách hàng sẽ có những sản phẩm ưng ý nhất, chất lượng phục vụ tốt và giá
+                thành tốt nhất, cùng những “ Chương Trình Khuyến Mãi Đặc Biệt”.</marquee>
+            <!--thẻ marquee làm cho chữ chạy-->
+        </h5>
+    </div>
+    <!--ng-include sẽ liên kết các trang html bên ngoài vào trang html chính-->
+    <!-- Nhúng phần nội dung thay đổi theo từng url -->
+    <div ng-view></div>
+    <!--sẽ được sử dụng trong đơn trang(SPA) nó sẽ hiển thị nội dung tương ứng với mỗi route-->
+    <!-- Nhúng code html phần footer vào trang -->
+    <div ng-include="'layout/footer.html'"></div>
+
+    <!--ng-include sẽ liên kết các trang html bên ngoài vào trang html chính-->
+    <!-- C2: Nhúng bằng đường link cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!-- Nhúng thư viện route để sử dụng được SPA, khai báo dưới câu lệnh khai báo angular js-->
+    <script src="../../lib/angular-route.js"></script>
+    <!-- Nhúng các file js chứa controller trước file điều hướng -->
+    <script src="controller/TrangChu.js"></script>
+    <script src="controller/QLSP.js"></script>
+    <script src="controller/ChiTietSanPham.js"></script>
+    <script src="controller/DangKy.js"></script>
+    <script src="controller/DangNhap.js"></script>
+    <script src="controller/DanhMuc.js"></script>
+    <script src="controller/GioHang.js"></script>
+    <script src="controller/GioiThieu.js"></script>
+    <script src="controller/HangDaMua.js"></script>
+    <script src="controller/SanPham.js"></script>
+    <script src="controller/DoiMatKhau.js"></script>
+    <!---->
+    <!-- Nhúng các file js trong dự án -->
+    <script src="route.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<header style="background-color: rgb(18, 40, 62);height: 100px;" class="d-flex" ng-controller="ChiTietSanPhamCtrl">
+    <div class="col-lg-5 d-flex justify-content-center ">
+        <img src="/ASM_HT/logo4.png" width="100px" height="50px" style="margin-top: 15px;">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <a class="nav-link  text-white" href="#TrangChu" role="button">
+                            TRANG CHỦ
+                        </a>
+                        <!---->
+                        <a class="nav-link  text-white" href="#GioiThieu" role="button">
+                            GIỚI THIỆU
+                        </a>
+                        <!---->
+                        <a class="nav-link  text-white" href="#QLSP" role="button">
+                            SẢN PHẨM
+                        </a>
+                        <!---->
+                        <a class="nav-link  text-white" href="#DanhMuc" role="button">
+                            DANH MỤC
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="col-lg-7 d-flex justify-content-center align-content-center ">
+
+        <nav class="navbar" style="padding-left: 50px;">
+            <div class="container-fluid">
+                <form class="d-flex" role="search" style="width: 550px;">
+                    <input class="form-control " type="search" placeholder="Bạn đang tìm gì..." aria-label="Search">
+                </form>
+            </div>
+        </nav>
+        <!---->
+        <nav class="navbar" style="padding-left: 20px;">
+            <a href="#GioHang">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="white" 
+                    class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z" />
+                </svg>             
+            </a>     
+            <span class="badge bg-danger bg-sm" style="font-size:8px;margin-top: -7px;">4</span>   
+        </nav>
+  <!---->
+        <nav style="margin-top: 35px;padding-left: 5px;">
+            <!---->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tài khoản</h1>
+                        </div>
+                        <div class="modal-body">
+                            <a href="#HangDaMua" class="text-decoration-none">Đơn hàng đã mua</a>
+                            <p></p>
+                            <a href="#DangNhap" class="text-decoration-none">Đăng nhập</a>
+                            <p></p>
+                            <a href="#DangKy" class="text-decoration-none">Đăng ký</a>
+                            <p></p>
+                            <a href="#DoiMatKhau" class="text-decoration-none">Đổi mật khẩu</a>
+                            <p></p>
+                            <a href="#DangNhap" class="text-decoration-none">Đăng xuất</a>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <svg data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-left: 20px;"
+                xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="white" class="bi bi-person-circle"
+                viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                <path fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+            </svg>
+            <!-- Modal -->
+        </nav>
+
+      
+
+       
+
+    </div>
+</header>

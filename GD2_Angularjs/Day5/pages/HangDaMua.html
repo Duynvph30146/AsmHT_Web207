@@ -1,0 +1,28 @@
+<body ng-controller="HangDaMuaCtrl">
+    <div style="margin-left: 100px;margin-right: 100px;margin-top: 20px;">
+        <table class="table table-bordered ">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Size</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Tổng tiền</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="dm in lstDaMua">
+                    <td>{{dm.id}}</td>
+                    <td><img src="{{dm.image}}" style="width:100px; height: 80px;"></td>
+                    <td>{{dm.name}}</td>
+                    <td>{{dm.size}}</td>
+                    <td>{{dm.price}}</td>
+                    <td>{{dm.quantity}}</td>
+                    <td>{{dm.sum}} VNĐ</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>

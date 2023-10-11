@@ -1,0 +1,42 @@
+<body ng-controller="GioHangCtrl">
+    <div style="margin-left: 100px;margin-right: 100px;margin-top: 50px;">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Ảnh</th>
+                    <th>Sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Số tiền</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="pr in lstProducts" ng-init="pr.quantity=1">
+                    <td><input type="checkbox" ng-model="pr.isChecked" ng-change="capNhatTongSoLuong()"></td>
+                    <td><img src="{{pr.image}}" width="50px"></td>
+                    <td>{{pr.name}}</td>
+                    <td><input type="number" min="1" ng-model="pr.quantity" ng-change="capNhatTongSoLuong()"></td>
+                    <td>{{pr.price}}</td>
+                    <td>
+                        <button class="btn btn-danger" ng-click="xoaGioHang($event,$index);">Xóa khỏi giỏ</button>
+                        <button type="submit" class="btn btn-primary" ng-click="mua()">Mua hàng</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+</body>
+<p>Tổng số lượng đã chọn: {{tongSoLuongDaChon}}</p>
+</div>
+<!---->
+<h3 style="padding-left: 40px;">CÓ THỂ BẠN CŨNG THÍCH</h3>
+<div class="row">
+    <div class="col-lg-4" style="padding-left: 55px;" ng-repeat="pr in lstProducts">
+        <img src="{{pr.image}}" width="100%">
+        <p>{{pr.name}}</p>
+        <p>{{pr.color}}</p>
+        <p style="font-weight: bold;">{{pr.price}}</p>
+    </div>
+</div>
+<!---->

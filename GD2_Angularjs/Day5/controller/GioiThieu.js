@@ -1,0 +1,4 @@
+function GioiThieuCtrl($scope) {
+    
+   
+};
